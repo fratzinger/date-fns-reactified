@@ -1,0 +1,57 @@
+{
+  "name": "date-fns-reactified",
+  "version": "0.0.1",
+  "description": "date-fns but for @vue/composition-api",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "shx rm -rf dist/ && npm run tsc",
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "version": "npm run build",
+    "release": "np",
+    "mocha": "cross-env NODE_ENV=test TS_NODE_PROJECT='tsconfig.test.json' mocha --timeout 5000",
+    "test": "npm run mocha",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fratzinger/date-fns-reactified.git"
+  },
+  "author": "fratzinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fratzinger/date-fns-reactified/issues"
+  },
+  "homepage": "https://github.com/fratzinger/date-fns-reactified#readme",
+  "dependencies": {
+    "@vueuse/core": "^6.7.6",
+    "date-fns": "^2.25.0",
+    "vue-demi": "^0.12.1"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.1.0",
+    "vue": "^2.6.0 || ^3.2.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@vue/composition-api": "^1.3.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "mocha": "^9.1.3",
+    "np": "^7.5.0",
+    "shx": "^0.3.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
