@@ -2,11 +2,26 @@
   "name": "date-fns-reactified",
   "version": "0.0.1",
   "description": "date-fns but for @vue/composition-api",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "src/**",
+    "lib/**",
+    "dist/**"
+  ],
   "scripts": {
-    "build": "shx rm -rf dist/ && npm run tsc",
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "build": "shx rm -rf dist/ && tsup src/index.ts --format cjs,esm --dts --minify",
     "version": "npm run build",
     "release": "np",
     "mocha": "cross-env NODE_ENV=test TS_NODE_PROJECT='tsconfig.test.json' mocha --timeout 5000",
@@ -24,7 +39,7 @@
   },
   "homepage": "https://github.com/fratzinger/date-fns-reactified#readme",
   "dependencies": {
-    "@vueuse/core": "^6.7.6",
+    "@vueuse/core": "^7.5.1",
     "date-fns": "^2.25.0",
     "vue-demi": "^0.12.1"
   },
@@ -52,6 +67,7 @@
     "np": "^7.5.0",
     "shx": "^0.3.3",
     "ts-node": "^10.4.0",
+    "tsup": "^5.11.10",
     "typescript": "^4.4.4"
   }
 }
