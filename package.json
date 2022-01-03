@@ -22,10 +22,10 @@
   ],
   "scripts": {
     "build": "shx rm -rf dist/ && tsup src/index.ts --format cjs,esm --dts --minify",
-    "version": "npm run build",
+    "version": "nr build",
     "release": "np",
     "mocha": "cross-env NODE_ENV=test TS_NODE_PROJECT='tsconfig.test.json' mocha --timeout 5000",
-    "test": "npm run mocha",
+    "test": "nr mocha",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/fratzinger/date-fns-reactified#readme",
   "dependencies": {
-    "@vueuse/core": "^7.5.1",
+    "@vueuse/shared": "^7.5.1",
     "date-fns": "^2.25.0",
     "vue-demi": "^0.12.1"
   },
@@ -56,6 +56,7 @@
     }
   },
   "devDependencies": {
+    "@antfu/ni": "^0.12.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
@@ -68,6 +69,8 @@
     "shx": "^0.3.3",
     "ts-node": "^10.4.0",
     "tsup": "^5.11.10",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "vue": "^3.2.26",
+    "vue2": "npm:vue@^2.6.14"
   }
 }
