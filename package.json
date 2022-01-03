@@ -18,7 +18,8 @@
     "README.md",
     "src/**",
     "lib/**",
-    "dist/**"
+    "dist/**",
+    "pnpm-lock.yaml"
   ],
   "scripts": {
     "build": "shx rm -rf dist/ && tsup src/index.ts --format cjs,esm --dts --minify",
