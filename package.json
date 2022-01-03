@@ -1,7 +1,14 @@
 {
   "name": "date-fns-reactified",
   "version": "0.1.1",
-  "description": "date-fns but for @vue/composition-api",
+  "description": "date-fns but for vue composition-api",
+  "keywords": [
+    "date-fns",
+    "reactify",
+    "vue",
+    "vueuse",
+    "composition api"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
