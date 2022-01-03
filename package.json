@@ -1,6 +1,6 @@
 {
   "name": "date-fns-reactified",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "date-fns but for @vue/composition-api",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
