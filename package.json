@@ -24,7 +24,7 @@
   "scripts": {
     "build": "shx rm -rf dist/ && tsup src/index.ts --format cjs,esm --dts --minify",
     "version": "nr build",
-    "release": "np",
+    "release": "np --no-cleanup",
     "mocha": "cross-env NODE_ENV=test TS_NODE_PROJECT='tsconfig.test.json' mocha --timeout 5000",
     "test": "nr mocha",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
